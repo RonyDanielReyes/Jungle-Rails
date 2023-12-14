@@ -1,0 +1,17 @@
+<tr>
+  <td>
+    <%= image_tag product.image.thumb.url, alt: product.name %>   <!-- 'function/template tag in a web used to display an image -->
+
+    <h4><%= product.name %></h4> 
+    <p><%= product.description %></p>                             <!-- 'the description of the product displayed as a paragraph' -->
+  </td>
+  <td>
+    <%= "$#{product.price}" %>                                    <!-- Displays the product price in the format "$X.XX" -->
+  </td>
+  <td>
+    <%= product.quantity %>                                       <!-- Displays the quantity of the product -->
+  </td>
+  <td> 
+    <%= "$#{product.price * product.quantity}" %>                 <!-- displays the total cost by multiplying the price of the product by its quantity -->
+  </td>
+</tr>
