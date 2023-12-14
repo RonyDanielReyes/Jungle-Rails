@@ -1,5 +1,6 @@
 class Admin::ProductsController < ApplicationController
-
+  # It takes 'name' and 'password' as arguments, retrieved from environment variables'ADMIN_NAME' and 'ADMIN_PASSWORD' respectively, to authenticate users.
+  http_basic_authenticate_with name: ENV["ADMIN_NAME"], password: ENV["ADMIN_PASSWORD"]   
   def index
     @products = Product.order(id: :desc).all
   end
