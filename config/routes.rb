@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+      # these routes are for showing users a login form, logging them in, and logging them out.
+      get '/login' => 'sessions#new'
+      post '/login' => 'sessions#create'
+      get '/logout' => 'sessions#destroy'
+      get '/signup' => 'users#new'
+      post '/users' => 'users#create'
 
   namespace :admin do
     get 'categories', to: 'categories#index'
     post 'categories', to: 'categories#create'
     get 'categories/new'
   end
+  
   get 'about', to: 'about#index'  ## create a route in the rail, to maps it
   root to: 'products#index'
 
