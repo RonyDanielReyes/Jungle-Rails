@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'about', to: 'about#index'  ## create a route in the rail, to maps it
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
