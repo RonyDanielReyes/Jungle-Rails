@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+##  created for branch feature/product-specs
 RSpec.describe Product, type: :model do
   describe 'Validations' do
     before do
